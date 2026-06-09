@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Entrenadores</h2>
+
+<a href="{% url 'trainer_create' %}" class="btn btn-primary">Nuevo Entrenador</a>
+
+<ul class="list-group mt-3">
+    {% for trainer in trainers %}
+    <li class="list-group-item d-flex justify-content-between">
+        {{ trainer.name }}
+
+        <div>
+            <a href="{% url 'trainer_edit' trainer.id %}" class="btn btn-warning btn-sm">Editar</a>
+            <a href="{% url 'trainer_delete' trainer.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

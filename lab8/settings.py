@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pokedex'
+    'rest_framework',
+    'pokedex',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,9 @@ STATICFILES_DIR = [
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+# Login settings
+LOGIN_REDIRECT_URL = 'pokedex:index'
+LOGOUT_REDIRECT_URL = 'pokedex:index'
+LOGIN_URL = 'pokedex:login'
