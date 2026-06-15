@@ -2,7 +2,7 @@
 {% block title %}{{ pokemon | capfirst }}{% endblock title %}
 {% block content %}
     <p>Has elegido el pokemon: <strong>{{ pokemon | capfirst }}</strong></p>
-    <p>Detalles</p>
+    <h2>Características</h2>
     <ul>
         <li>Nombre: {{pokemon.name | capfirst}}</li>
         <li>Tipo: {{pokemon.type | capfirst}}</li>
